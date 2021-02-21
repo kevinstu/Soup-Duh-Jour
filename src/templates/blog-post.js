@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -23,6 +24,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <Img sizes={post.frontmatter.featuredImage.childImageSharp.sizes} />
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -85,6 +87,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        featuredImage {
+          childImageSharp {
+            sizes(maxWidth: 630) {
+              ...GatsbyImageSharpSizes
+            }
+          }
+        }
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

@@ -84,6 +84,7 @@ body {
 }
 
 footer {
+  text-align: center;
   padding: var(--spacing-6) var(--spacing-0);
 }
 
@@ -242,8 +243,8 @@ a:focus {
 
 .global-wrapper {
   margin: var(--spacing-0) auto;
-  max-width: var(--maxWidth-wrapper);
-  padding: var(--spacing-10) var(--spacing-5);
+  max-width: var(--maxWidth-full);
+  /* padding: var(--spacing-10) var(--spacing-5); */
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
@@ -252,6 +253,11 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+}
+
+.main-wrapper {
+  max-width: var(--maxWidth-wrapper);
+  margin: 0 auto;
 }
 
 .main-heading {

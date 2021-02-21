@@ -1,29 +1,41 @@
 import React from "react"
 import { Link } from "gatsby"
+import Hero from "../components/hero"
 
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
-  let header
+  
+  const header = (
+    <Link className="header-link-home" to="/">
+    <Hero>        
+      {title}
+    </Hero>
+  </Link>
+  )
 
-  if (isRootPath) {
-    header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
-    )
-  } else {
-    header = (
-      <Link className="header-link-home" to="/">
-        {title}
-      </Link>
-    )
-  }
+  // if (isRootPath) {
+  //   header = (
+  //     <Hero>
+  //       <Link to="/">{title}</Link>
+  //     </Hero>
+
+  //   )
+  // } else {
+  //   header = (
+
+  //     <Link className="header-link-home" to="/">
+  //       <Hero>        
+  //         {title}
+  //       </Hero>
+  //     </Link>
+  //   )
+  // }
 
   return (
     <div className="global-wrapper" data-is-root-path={isRootPath}>
       <header className="global-header">{header}</header>
-      <main>{children}</main>
+      <main className="main-wrapper">{children}</main>
       <footer>
         © {new Date().getFullYear()}, Built with
         {` `}
