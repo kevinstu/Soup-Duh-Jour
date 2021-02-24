@@ -258,6 +258,7 @@ a:focus {
 .main-wrapper {
   max-width: var(--maxWidth-wrapper);
   margin: 0 auto;
+  padding: var(--spacing-10) var(--spacing-5);
 }
 
 .main-heading {

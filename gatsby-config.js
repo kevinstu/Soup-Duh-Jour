@@ -3,9 +3,9 @@ module.exports = {
     title: `Soup Duh Jour`,
     author: {
       name: `Keith Soup`,
-      summary: `lives and works in Buffalo. He writes jokes in his free time.`,
+      summary: `is an "artist" that lives and works in Buffalo.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `A webcomic by Keith Soup.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.app/`,
     social: {
       twitter: `keithsoup20`,
@@ -66,7 +66,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/soup-icon.png`,
       },
     },
     `gatsby-plugin-react-helmet`,
